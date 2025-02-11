@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.11.9 on win32)" generated="2025-02-11T10:14:40.601453" rpa="false" schemaversion="5">
+<suite id="s1" name="TestRobot" source="C:\Users\elswo\OneDrive\เดสก์ท็อป\TestRobot">
+<suite id="s1-s1" name="TestRobot" source="C:\Users\elswo\OneDrive\เดสก์ท็อป\TestRobot\TestRobot.robot">
+<test id="s1-s1-t1" name="Remove Product From Cart" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:14:40.896780" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T10:14:40.896274" elapsed="5.388908"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-11T10:14:46.286189" elapsed="0.038964"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-11T10:14:48.326538" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-11T10:14:46.325153" elapsed="2.001891"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:14:48.337072" level="INFO">${title} = Automation Exercise</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-02-11T10:14:48.327044" elapsed="0.011036"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Automation Exercise</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-11T10:14:48.338080" elapsed="0.001507"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T10:14:48.340597" level="INFO">🎯 หน้าแรกโหลดสำเร็จ</msg>
+<arg>🎯 หน้าแรกโหลดสำเร็จ</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T10:14:48.339587" elapsed="0.001010"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:14:48.341595" level="INFO">Executing JavaScript:
+var ads = document.querySelectorAll('iframe'); ads.forEach(ad =&gt; ad.remove());
+Without any arguments.</msg>
+<arg>var ads = document.querySelectorAll('iframe'); ads.forEach(ad =&gt; ad.remove());</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-11T10:14:48.341595" elapsed="0.013037"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-11T10:14:50.356507" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-11T10:14:48.356139" elapsed="2.000368"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BTN}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:14:50.358706" elapsed="0.048993"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BTN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-11T10:14:50.409209" elapsed="0.301420"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:14:50.713634" level="INFO">Clicking element '(//a[contains(text(),'Add to cart')])[1]'.</msg>
+<msg time="2025-02-11T10:14:52.106857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-11T10:14:52.107967" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt; is not clickable at point (589, 619). Other element would receive the click: &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt;
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7337902F5+28725]
+	(No symbol) [0x00007FF7336F2AE0]
+	(No symbol) [0x00007FF73358510A]
+	(No symbol) [0x00007FF7335E10F8]
+	(No symbol) [0x00007FF7335DEB42]
+	(No symbol) [0x00007FF7335DBC51]
+	(No symbol) [0x00007FF7335DABB1]
+	(No symbol) [0x00007FF7335CC6B4]
+	(No symbol) [0x00007FF7335FFFAA]
+	(No symbol) [0x00007FF7335CBF86]
+	(No symbol) [0x00007FF7336001C0]
+	(No symbol) [0x00007FF733620181]
+	(No symbol) [0x00007FF7335FFD53]
+	(No symbol) [0x00007FF7335CA0E3]
+	(No symbol) [0x00007FF7335CB471]
+	GetHandleVerifier [0x00007FF733ABF30D+3366989]
+	GetHandleVerifier [0x00007FF733AD12F0+3440688]
+	GetHandleVerifier [0x00007FF733AC78FD+3401277]
+	GetHandleVerifier [0x00007FF73385AAAB+858091]
+	(No symbol) [0x00007FF7336FE74F]
+	(No symbol) [0x00007FF7336FA304]
+	(No symbol) [0x00007FF7336FA49D]
+	(No symbol) [0x00007FF7336E8B69]
+	BaseThreadInitThunk [0x00007FFF6F3AE8D7+23]
+	RtlUserThreadStart [0x00007FFF70E9FBCC+44]
+</msg>
+<arg>${ADD_TO_CART_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-11T10:14:50.711640" elapsed="1.400048">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt; is not clickable at point (589, 619). Other element would receive the click: &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt;
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7337902F5+28725]
+	(No symbol) [0x00007FF7336F2AE0]
+	(No symbol) [0x00007FF73358510A]
+	(No symbol) [0x00007FF7335E10F8]
+	(No symbol) [0x00007FF7335DEB42]
+	(No symbol) [0x00007FF7335DBC51]
+	(No symbol) [0x00007FF7335DABB1]
+	(No symbol) [0x00007FF7335CC6B4]
+	(No symbol) [0x00007FF7335FFFAA]
+	(No symbol) [0x00007FF7335CBF86]
+	(No symbol) [0x00007FF7336001C0]
+	(No symbol) [0x00007FF733620181]
+	(No symbol) [0x00007FF7335FFD53]
+	(No symbol) [0x00007FF7335CA0E3]
+	(No symbol) [0x00007FF7335CB471]
+	GetHandleVerifier [0x00007FF733ABF30D+3366989]
+	GetHandleVerifier [0x00007FF733AD12F0+3440688]
+	GetHandleVerifier [0x00007FF733AC78FD+3401277]
+	GetHandleVerifier [0x00007FF73385AAAB+858091]
+	(No symbol) [0x00007FF7336FE74F]
+	(No symbol) [0x00007FF7336FA304]
+	(No symbol) [0x00007FF7336FA49D]
+	(No symbol) [0x00007FF7336E8B69]
+	BaseThreadInitThunk [0x00007FFF6F3AE8D7+23]
+	RtlUserThreadStart [0x00007FFF70E9FBCC+44]
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.111688" elapsed="0.000993"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<arg>Click Button</arg>
+<arg>//button[contains(text(),'Continue Shopping')]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.112681" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>🛒 เพิ่มสินค้าลงตะกร้าสำเร็จ</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.112681" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CART_BTN}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.112681" elapsed="0.001613"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CART_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.114294" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.115407" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Shopping Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.115407" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>🛍️ หน้าตะกร้าแสดงสำเร็จ</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.116395" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REMOVE_BTN}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.117002" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${REMOVE_BTN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.117002" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${REMOVE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.118121" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.119107" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<arg>Shopping Cart</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.119107" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>✅ ลบสินค้าสำเร็จและตะกร้าว่างแล้ว</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.120112" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-02-11T10:14:52.120112" elapsed="0.001007"/>
+</kw>
+<status status="FAIL" start="2025-02-11T10:14:40.894274" elapsed="11.226845">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt; is not clickable at point (589, 619). Other element would receive the click: &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt;
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7337902F5+28725]
+	(No symbol) [0x00007FF7336F2AE0]
+	(No symbol) [0x00007FF73358510A]
+	(No symbol) [0x00007FF7335E10F8]
+	(No symbol) [0x00007FF7335DEB42]
+	(No symbol) [0x00007FF7335DBC51]
+	(No symbol) [0x00007FF7335DABB1]
+	(No symbol) [0x00007FF7335CC6B4]
+	(No symbol) [0x00007FF7335FFFAA]
+	(No symbol) [0x00007FF7335CBF86]
+	(No symbol) [0x00007FF7336001C0]
+	(No symbol) [0x00007FF733620181]
+	(No symbol) [0x00007FF7335FFD53]
+	(No symbol) [0x00007FF7335CA0E3]
+	(No symbol) [0x00007FF7335CB471]
+	GetHandleVerifier [0x00007FF733ABF30D+3366989]
+	GetHandleVerifier [0x00007FF733AD12F0+3440688]
+	GetHandleVerifier [0x00007FF733AC78FD+3401277]
+	GetHandleVerifier [0x00007FF73385AAAB+858091]
+	(No symbol) [0x00007FF7336FE74F]
+	(No symbol) [0x00007FF7336FA304]
+	(No symbol) [0x00007FF7336FA49D]
+	(No symbol) [0x00007FF7336E8B69]
+	BaseThreadInitThunk [0x00007FFF6F3AE8D7+23]
+	RtlUserThreadStart [0x00007FFF70E9FBCC+44]
+</status>
+</test>
+<status status="FAIL" start="2025-02-11T10:14:40.625009" elapsed="11.497993"/>
+</suite>
+<status status="FAIL" start="2025-02-11T10:14:40.605455" elapsed="11.519052"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestRobot" id="s1" pass="0" fail="1" skip="0">TestRobot</stat>
+<stat name="TestRobot" id="s1-s1" pass="0" fail="1" skip="0">TestRobot.TestRobot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
